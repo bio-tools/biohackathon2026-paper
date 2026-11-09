@@ -1,33 +1,58 @@
 ---
-title: 'BioHackEU23 report: Template for the very long title'
-title_short: 'BioHackEU23 #26: unknown chemical substances'
+title: 'BioHackEU26 report: automated software maturity assessment and tool disambiguation in bio.tools'
+title_short: 'BioHackEU26 #20: automated software maturity assessment and tool disambiguation in bio.tools'
 tags:
-  - cheminformatics
-  - PubChem
-  - unknown chemical substances
+  - research software
+  - software maturity
+  - fairness
 authors:
-  - name: First Author
+  - name: Ana IS Mendes
+    orcid: 0009-0008-5170-0927
     affiliation: 1
+    role: Writing – original draft
+  - name: Lev Levitsky
+    orcid: 0000-0000-0000-0000
+    affiliation: 1
+    role: Writing – original draft
+  - name: Magnus Palmblad
+    orcid: 0000-0000-0000-0000
+    affiliation: 2
+    role: Conceptualization
+  - name: Mariia Steeghs-Turchina
+    orcid: 0000-0002-0852-4752
+    affiliation: 2
+    role: Writing – original draft
+  - name: Veit Schwämmle
+    orcid: 0000-0002-9708-6722
+    affiliation: 1
+    role: Writing – original draft
+  - name: Walter Baccinelli
+    orcid: 0000-0001-8888-4792
+    affiliation: 3
     role: Writing – original draft
   - name: Last Author
     orcid: 0000-0000-0000-0000
     affiliation: 2
-    role: Conceptualization, Writing – review & editing
+    role: Conceptualization, Writing – review & editing, Software, Visualization, Supervision, Methodology, 
 affiliations:
-  - name: First Affiliation
+  - name: University of Southern Denmark, Campusvej 55, 5230, Odense, Denmark
+    ror: 03yrrjy16
     index: 1
-  - name: ELIXIR Europe
-    ror: 044rwnt51
+  - name: Leiden University Medical Center, Albinusdreef 2, 2333 ZA, Leiden, The Netherlands
+    ror: 05xvt9f17
     index: 2
-date: 8 November 2023
+  - name: Health-RI, Jaarbeursplein 6, 3521 AL, Utrecht, The Netherlands
+    ror: 02xcmp898
+    index: 3
+date: 9 November 2026
 cito-bibliography: paper.bib
-event: BH23EU
-biohackathon_name: "BioHackathon Europe 2023"
+event: BH26EU
+biohackathon_name: "BioHackathon Europe 2026"
 biohackathon_url:   "https://biohackathon-europe.org/"
-biohackathon_location: "Barcelona, Spain, 2023"
-group: Project 26
+biohackathon_location: "Barcelona, Spain, 2026"
+group: Project 20
 # URL to project git repo --- should contain the actual paper.md:
-git_url: https://github.com/biohackrxiv/publication-template
+git_url: https://github.com/bio-tools/biohackathon2026-paper
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
 authors_short: First Author \emph{et al.}
@@ -36,7 +61,7 @@ authors_short: First Author \emph{et al.}
 
 # Introduction
 
-As part of the BioHackathon Europe 2023, we here report...
+As part of the BioHackathon Europe 2026, we here report...
 
 ## Meeting information
 
