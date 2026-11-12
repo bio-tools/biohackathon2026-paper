@@ -79,7 +79,7 @@ This work extends takes the Multi-Modal Maturity Model (MMMM) as a starting poin
 
 # Approach
 
-Maturity Meter evaluates a research software repository using signals drawn from multiple sources:
+*maturity meter* evaluates a research software repository using signals drawn from multiple sources:
 
 | Source | Examples of signals | Role in assessment |
 |---|---|---|
@@ -123,10 +123,7 @@ Initial analysis focused on the coverage of individual metrics and indicators ac
 
 <!-- TODO: Insert figure showing metric/indicator coverage across the 834 assessed tools. -->
 
-![Metric and indicator coverage across the assessed proteomics tools.](./figures/coverage.png){ width=100% }
-
-
-The coverage analysis helps distinguish indicators that can currently support large-scale assessment from those that require improved metadata, more robust extraction, or alternative data sources.
+![Indicator coverage across the assessed proteomics tools, per source TODO.](./figures/coverage_per_source.png){ width=70% }
 
 <!-- TODO: selected metrics? -->
 
@@ -137,7 +134,9 @@ We generated exploratory visualisations for selected metrics, including indicato
 
 <!-- TODO: Insert selected bar plots, for example protected branches and code complexity. Keep the interpretation concise until final results are available. -->
 
-![Distribution of selected repository-management and code-quality indicators across assessed proteomics tools.](./figures/selected_indicators.png){ width=100% }
+![Default branch protected.](./figures/default_branch_protected.png){ width=50% }
+
+![Average cyclomatic complexity.](./figures/average_ccn.png){ width=50% }
 
 These initial results are intended to identify broad patterns and data-quality issues rather than to draw definitive conclusions about individual tools. In particular, differences in repository hosting practices, repository activity, and metadata availability may affect the interpretation of individual indicators.
 
@@ -170,7 +169,7 @@ These initial results are intended to identify broad patterns and data-quality i
 
 # Implementation
 
-Maturity Meter is implemented as a command-line tool, Python library, and web API. A single repository can be evaluated directly, while batch evaluation supports assessment of multiple tools from a CSV input. Results can be saved as JSON, and previously fetched data can be reused to avoid unnecessary repeated retrieval.
+*maturity meter* is implemented as a command-line tool, Python library, and web API. A single repository can be evaluated directly, while batch evaluation supports assessment of multiple tools from a CSV input. Results can be saved as JSON, and previously fetched data can be reused to avoid unnecessary repeated retrieval.
 
 ```bash
 poetry run maturity-meter evaluate [https://github.com/owner/repo](https://github.com/owner/repo)
@@ -190,14 +189,14 @@ poetry run maturity-meter evaluate [https://github.com/owner/repo](https://githu
     
 # Discussion
 
-Automated maturity assessment cannot replace expert judgement, but it can make repeated, large-scale assessment more consistent and timely. By combining curated metadata, repository signals, publication information, static analysis, and FAIR-related checks, Maturity Meter aims to provide a useful first-pass indicator of research software maturity.
+Automated maturity assessment cannot replace expert judgement, but it can make repeated, large-scale assessment more consistent and timely. By combining curated metadata, repository signals, publication information, static analysis, and FAIR-related checks, *maturity meter* aims to provide a useful first-pass indicator of research software maturity.
 
 ...
 
 
 # Conclusion and future work
 
-Maturity Meter provides a working foundation for automated, reproducible maturity assessment of research software in bio.tools. The BioHackathon project produced a scalable assessment workflow, improved Resqui integrations, an API prototype, and initial coverage and indicator visualisations.
+*maturity meter* provides a working foundation for automated, reproducible maturity assessment of research software in bio.tools. The BioHackathon project produced a scalable assessment workflow, improved Resqui integrations, an API prototype, and initial coverage and indicator visualisations.
 
 Future work will focus on:
 
@@ -210,7 +209,7 @@ Future work will focus on:
 
 # GitHub repository and data repositories
 
-* Maturity meter implementation: https://github.com/bio-tools/maturity-meter
+* *maturity meter* implementation: https://github.com/bio-tools/maturity-meter
 * Official project description: https://github.com/elixir-europe/biohackathon-projects-2026/blob/main/20.md
 
 
