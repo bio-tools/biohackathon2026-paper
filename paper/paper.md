@@ -9,11 +9,11 @@ authors:
   - name: Ana IS Mendes
     orcid: 0009-0008-5170-0927
     affiliation: 1
-    role: Writing – original draft
+    role: Conceptualization, Writing – original draft
   - name: Lev Levitsky
     orcid: 0000-0000-0000-0000
     affiliation: 1
-    role: Writing – original draft
+    role: Software
   - name: Magnus Palmblad
     orcid: 0000-0000-0000-0000
     affiliation: 2
@@ -21,19 +21,19 @@ authors:
   - name: Mariia Steeghs-Turchina
     orcid: 0000-0002-0852-4752
     affiliation: 2
-    role: Writing – original draft
+    role: Conceptualization, Methodology, Software
   - name: Veit Schwämmle
     orcid: 0000-0002-9708-6722
     affiliation: 1
-    role: Writing – original draft
+    role: Supervision, Software
   - name: Walter Baccinelli
     orcid: 0000-0001-8888-4792
     affiliation: 3
-    role: Writing – original draft
+    role: Software, Visualization
   - name: Last Author
     orcid: 0000-0000-0000-0000
     affiliation: 2
-    role: Conceptualization, Writing – review & editing, Software, Visualization, Supervision, Methodology, 
+    role: Conceptualization, Writing - original draft, Writing – review & editing, Software, Visualization, Supervision, Methodology, 
 affiliations:
   - name: University of Southern Denmark, Campusvej 55, 5230, Odense, Denmark
     ror: 03yrrjy16
@@ -48,7 +48,7 @@ date: 9 November 2026
 cito-bibliography: paper.bib
 event: BH26EU
 biohackathon_name: "BioHackathon Europe 2026"
-biohackathon_url:   "https://biohackathon-europe.org/"
+biohackathon_url: "https://biohackathon-europe.org/"
 biohackathon_location: "Barcelona, Spain, 2026"
 group: Project 20
 # URL to project git repo --- should contain the actual paper.md:
@@ -59,75 +59,85 @@ authors_short: First Author \emph{et al.}
 ---
 
 
+# Abstract
+
+...
+
+
 # Introduction
 
-As part of the BioHackathon Europe 2026, we here report...
+Research software is central to modern life sciences, yet identifying trustworthy, maintainable, and reusable tools remains difficult. Researchers often rely on names, brief descriptions, topics, and community reputation when selecting software, while signals of documentation quality, maintenance activity, FAIR alignment, and reuse are scattered across repositories, metadata services, and publication databases.
 
-## Meeting information
+The Maturity Meter project develops an automated maturity model for research software tools hosted on GitHub or GitLab. Its goal is to provide a scalable and informative complement to manual maturity assessment by combining heterogeneous metadata and repository signals into maturity indicators.
 
-If you want to submit a preprint to BioHackrXiv, first check if your meeting is registered. You can find a list
-of meetings [here](https://index.biohackrxiv.org/meetings). If your meeting is missing, please contact your meeting
-organizers. The above list also provides information on the YAML fields with information about the meeting.
+In the longer term, the model is intended to support software disambiguation and discovery in the bio.tools registry: helping researchers distinguish tools with similar names or functionality and make more informed choices based on evidence of quality, maintenance, and reuse.
 
-The following fields need to be given:
+# Approach
 
-```YAML
-biohackathon_name: "BioHackathon Europe 2023"
-biohackathon_url:   "https://biohackathon-europe.org/"
-biohackathon_location: "Barcelona, Spain, 2023"
-group: Project 26
-git_url: https://github.com/yourOrganization/your_report_repo
-```
+Maturity Meter evaluates a research software repository using signals drawn from multiple sources:
 
-The [BioHackrXiv meeting pages](https://index.biohackrxiv.org/meetings) provide content to use for the first
-three fields. The `git_url:` field must have the link to the GitHub repository with your preprint (draft).
+| Source | Examples of signals | Role in assessment |
+|---|---|---|
+| bio.tools | Tool description, topics, functions, availability, documentation links | Contextual and community-curated metadata |
+| OpenEBench | Tool-related quality and benchmarking metadata | Additional research-software metadata |
+| GitHub or GitLab | Repository activity, issues, releases, documentation, licensing, community signals | Maintenance and development indicators |
+| Europe PMC | Publications and citations associated with a tool | Usage, reuse, and scholarly impact signals |
+| Static analysis | Code-quality and repository-structure indicators | Automated technical-quality signals |
 
-## Author information
 
-Information about the authors is given in the [YAML](https://en.wikipedia.org/wiki/YAML) format at the top of this template.
-For authors you provide their names, their affiliations. That is the minimum, but as BioHackrXiv is moving to a situation
-where more metadata is shared, and used by, for example, EuropePMC, adding additional information ie encouraged.
+# Results
 
-BioHackathons is about hacking together, and the minimal number of authors for reports is two. This makes a minimal example
-look like this:
+During the BioHackathon, 
 
-```yaml
-authors:
-  - name: First Author
-    affiliation: 1
-  - name: Last Author
-    affiliation: 2
-affiliations:
-  - name: First Affiliation
-    index: 1
-  - name: ELIXIR Europe
-    index: 2
-```
+...
 
-### Author identifiers
 
-Ideally, authors provide their [ORCID](https://orcid.org/) identifier. For affiliations, It is added with the `orcid:` field.
-So, and author record would look like this:
+## Implementation
 
-```yaml
-authors:
-  - name: First Author
-    affiliation: 1
-    orcid: 0000-0000-0000-0000
-```
+Maturity Meter is implemented as a command-line tool, Python library, and web API.
 
-### Research Organization Registry identifiers
+...
 
-Matching the author identifier, the affiliations can be further specified with the
-[Research Organization Registry](https://ror.org/) (ROR) identifier.
-For example, this is the affiliation identifier can be added with the `ror:` field:
 
-```yaml
-affiliations:
-  - name: ELIXIR Europe
-    ror: 044rwnt51
-    index: 2
-```
+## 
+
+An example evaluation of `<repository URL>` produced the following result:
+
+| Component | Result | Interpretation |
+|---|---:|---|
+| Compatibility | <value or placeholder> | <Brief interpretation> |
+| FAIRness | <value or placeholder> | <Brief interpretation> |
+| Maintainability | <value or placeholder> | <Brief interpretation> |
+| Scientific Impact | <value or placeholder> | <Brief interpretation> |
+| Overall maturity | <value or placeholder> | <Brief interpretation> |
+
+
+    
+# Discussion
+
+Automated maturity assessment cannot replace expert judgement, but it can make repeated, large-scale assessment more consistent and timely. By combining curated metadata, repository signals, publication information, and static analysis, Maturity Meter aims to provide a useful first-pass indicator of research software maturity.
+
+The approach also has limitations. Metadata may be incomplete or inconsistent across sources; repository activity does not necessarily measure scientific quality; and...
+    
+
+# Conclusion and future work
+
+
+- Validate maturity scores against curated expert assessments.
+- Improve handling of incomplete, inconsistent, or ambiguous metadata.
+- Develop user facing reports and visualisations for individual tools and collections.
+- Explore integration with software discovery and disambiguation services like bio.tools.
+- Support community review and periodic re-evaluation of maturity scores.
+
+
+# GitHub repository and data repositories
+
+* GitHub repository: https://github.com/bio-tools/maturity-meter
+* 
+
+
+# Report tutorial 
+
 
 ### Contributor Role Taxonomy
 
@@ -144,62 +154,10 @@ authors:
     role: Conceptualization, Writing – review & editing
 ```
 
-### A full examples
-
-A full example then has this structure:
-
-```yaml
-authors:
-  - name: First Author
-    affiliation: 1
-    role: Writing – original draft
-  - name: Last Author
-    orcid: 0000-0000-0000-0000
-    affiliation: 2
-    role: Conceptualization, Writing – review & editing
-affiliations:
-  - name: First Affiliation
-    index: 1
-  - name: ELIXIR Europe
-    ror: 044rwnt51
-    index: 2
-```
-
-# Formatting
-
-This document use Markdown and you can look at [this tutorial](https://www.markdowntutorial.com/).
 
 ## Subsection level 2
 
-Please keep sections to a maximum of only two levels.
-
-## Tables
-
-Tables can be added in the following way, though alternatives are possible:
-
-```markdown
-Table: Note that table caption is automatically numbered and should be
-given before the table itself.
-
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
-```
-
-This gives:
-
-Table: Note that table caption is automatically numbered and should be
-given before the table itself.
-
-| Header 1 | Header 2 |
-| -------- | -------- |
-| item 1 | item 2 |
-| item 3 | item 4 |
-
 ## Figures
-
-A figure is added with:
 
 ```markdown
 ![Caption for BioHackrXiv logo figure](./biohackrxiv.png)
@@ -237,12 +195,6 @@ graph TD;
     C-->D;
 ```
 
-# Other main section on your manuscript level 1
-
-Lists can be added with:
-
-1. Item 1
-2. Item 2
 
 # Citation Typing Ontology annotation
 
@@ -278,16 +230,11 @@ Possible CiTO typing annotation include:
 
 There is a general `cites` intention, but this is already implied and should be left out.
 
-# Results
-
-
-# Discussion
-
-...
 
 ## Acknowledgements
 
-...
+The authors acknowledge the ELIXIR and all organisers and participants of ELIXIR BioHackathon Europe 2026 in Barcelona, Spain ...
+
 
 # References
 
